@@ -28,7 +28,7 @@
               <test>runner.${whichRunner}</test>
               <systemPropertyVariables>
                 <!--suppress UnresolvedMavenProperty -->
-                <whichBrowser>${browserName}</whichBrowser>
+                <whichBrowser>chrome</whichBrowser>
               </systemPropertyVariables>
             </configuration>
           </plugin>
