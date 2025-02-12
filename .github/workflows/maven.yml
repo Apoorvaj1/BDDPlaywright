@@ -26,7 +26,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgtk-4-dev libgraphene-1.0-0 libwoff1 \
             libvpx-dev libevent-dev libopus-dev libgstreamer1.0-0 \
-            libgst-plugins-base1.0-dev libflite1 libavif-dev \
+            libgstreamer-plugins-base1.0-dev libflite1 libavif-dev \
             libharfbuzz-dev libsecret-1-dev libhyphen-dev libmanette-0.2-dev \
             libgles2-mesa-dev x264
 
