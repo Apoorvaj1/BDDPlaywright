@@ -31,4 +31,4 @@ jobs:
             libgles2-mesa-dev x264
 
       - name: Build with Maven
-        run: mvn clean test -DwhichRunner=TestRunner -DwhichBrowser=chrome -Dheadless=false
+        run: xvfb-run --auto-servernum mvn clean test -DwhichRunner=TestRunner -DwhichBrowser=chrome -Dheadless=false
