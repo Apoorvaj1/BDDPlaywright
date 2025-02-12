@@ -113,6 +113,7 @@ public class BaseTest {
 
         System.out.println("Browser initialized successfully: " + getBrowser()); // Debug log
 
+        //context = getBrowser().newContext(new Browser.NewContextOptions().setViewportSize(null).setRecordVideoDir(Paths.get("./src/test/resources/video/")));
         context = getBrowser().newContext(new Browser.NewContextOptions().setViewportSize(null));
         setContext(context);
 
