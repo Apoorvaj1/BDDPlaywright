@@ -82,40 +82,28 @@ public class BaseTest {
         switch (browserName.toLowerCase()) {
             case "chrome":
                 browser = getPlaywright().chromium().launch(new BrowserType.LaunchOptions()
-                        .setChannel("chrome").setArgs(options).setHeadless(false).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setChannel("chrome").setArgs(options).setHeadless(false));
                 break;
             case "headless":
                 browser = getPlaywright().chromium().launch(new BrowserType.LaunchOptions()
-                        .setHeadless(true).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setHeadless(true));
                 break;
             case "msedge":
                 browser = getPlaywright().chromium().launch(new BrowserType.LaunchOptions()
-                        .setChannel("msedge").setArgs(options).setHeadless(false).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setChannel("msedge").setArgs(options).setHeadless(false));
                 break;
             case "firefox":
                 browser = getPlaywright().firefox().launch(new BrowserType.LaunchOptions()
-                        .setChannel("firefox").setArgs(options).setHeadless(false).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setChannel("firefox").setArgs(options).setHeadless(false));
                 break;
             case "webkit":
                 browser = getPlaywright().webkit().launch(new BrowserType.LaunchOptions()
-                        .setHeadless(false).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setHeadless(false));
                 break;
             default:
                 System.out.println("Invalid browser! Using Chrome as default.");
                 browser = getPlaywright().chromium().launch(new BrowserType.LaunchOptions()
-                        .setChannel("chrome").setArgs(options).setHeadless(false).setHandleSIGINT(false)   // Prevents Playwright from closing the browser on SIGINT
-                        .setHandleSIGTERM(false)  // Prevents browser auto-close on test end
-                        .setHandleSIGHUP(false)); // Keeps browser alive);
+                        .setChannel("chrome").setArgs(options).setHeadless(false));
         }
 
         setBrowser(browser); // Store in ThreadLocal

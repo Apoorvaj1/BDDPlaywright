@@ -21,12 +21,12 @@ public class stepDefinitions extends BaseTest {
     Page page;
     @Given("user navigate to carwale website")
     public void user_navigate_to_carwale_website() throws IOException {
-        page =BaseTest.initialize();
+        page = BaseTest.initialize();
         homepage = new Homepage(page);
         homepage.navigateURL(data.URL);
     }
     @When("user mousehover to New car option")
-    public void user_movehover_to_new_car_option() throws IOException {
+    public void user_mousehover_to_new_car_option() throws IOException {
         homepage.mouseHoverNewCar("NEW_CARS");
     }
     @When("click on Find New Cars")
