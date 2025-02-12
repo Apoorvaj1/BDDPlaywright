@@ -25,7 +25,7 @@
             <version>3.5.2</version>
             <configuration>
               <!--suppress UnresolvedMavenProperty -->
-              <test>runner.${whichRunner}</test>
+              <test>runner.TestRunner</test>
               <systemPropertyVariables>
                 <!--suppress UnresolvedMavenProperty -->
                 <whichBrowser>chrome</whichBrowser>
